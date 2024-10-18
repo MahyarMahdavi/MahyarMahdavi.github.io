@@ -1,0 +1,127 @@
+/* Background color for the whole page */
+body {
+    background-color: #e0f7fa;
+    /* Light blue background color */
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+    /* Prevent horizontal scrolling */
+}
+
+/* Main content area */
+main {
+    max-width: 800px;
+    /* Set a maximum width for the content */
+    margin: 100px auto 0;
+    /* Center the content horizontally and add 100px margin on top */
+    padding: 20px;
+    /* Add padding for space inside the content */
+}
+
+/* Move the header lower */
+header {
+    margin-bottom: 50px;
+    /* Add space below the header */
+    text-align: center;
+    /* Center the header text */
+}
+
+/* Center navigation buttons */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    /* Use flexbox to center the items */
+    justify-content: center;
+    /* Center the items horizontally */
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    font-size: 30px;
+    color: black;
+    transition: color 0.3s ease;
+
+    /* Smooth hover effect */
+}
+
+nav ul li a:hover {
+    color: rgb(0, 132, 255);
+    /* Change the hover color */
+    transform: scale(1.5);
+    /* Enlarge the icons on hover */
+    transition: transform 0.3s ease;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+    /* Smooth scaling effect */
+}
+
+/* Animate header text */
+header h1 {
+    margin-bottom: 50px;
+    text-align: center;
+    font-size: 36px;
+    animation: slide-in 1s ease-out;
+    /* Slide-in effect */
+}
+
+/* Slide-in animation */
+@keyframes slide-in {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Section styling */
+section {
+    text-align: left;
+    line-height: 1.6;
+    /* Improve readability by increasing line height */
+    opacity: 0;
+    animation: fade-in 2s forwards;
+    /* Fade-in effect */
+    animation-delay: 1s;
+    /* Wait before fading in */
+}
+
+/* Fade-in animation */
+@keyframes fade-in {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Styling for the circular profile photo with float animation */
+.profile-photo {
+    float: right;
+    /* Position the image to the right */
+    width: 200px;
+    height: 240px;
+    margin-left: 20px;
+    border-radius: 50%;
+    object-fit: cover;
+    animation: float 3s infinite ease-in-out;
+    /* Floating animation */
+}
+
+/* Float animation for the image */
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+        /* Moves the image up and down */
+    }
+}
