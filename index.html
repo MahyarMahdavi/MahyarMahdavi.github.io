@@ -1,56 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>My Personal Website</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Personal Website</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-    <header>
-        <h1>Welcome to My Personal Website</h1>
-        <nav>
-            <ul>
-                <li><a href="https://github.com/MahyarMahdavi" target="_blank"><i class="fab fa-github"></i></a></li>
-                <li><a href="https://www.linkedin.com/in/mahyarmahdavi/" target="_blank"><i
-                            class="fab fa-linkedin"></i></a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <img src="LinkedIn.jpeg" alt="A photo of me" class="profile-photo">
-        <section id="about">
-            <h2>About me</h2>
-            <p>Hi 👋 <br>
-                I'm Mahyar,
 
-                A second-year Computer Science student💻 at Toronto Metropolitan University📚 with a passion for both
-                technology and biology.
-                I am deeply interested in the intersection of these fields, particularly in how technology can be
-                applied to better understand the human body and mind🧠.
-                In my free time, I actively explore advancements in computer science and biological sciences, constantly
-                seeking ways to bridge the gap between the two.</p>
-        </section>
-        <section id="projects">
-            <h2>Projects</h2>
-            <p>Cardon-AI :</p>
-            <p>An innovative AI assistant🤖 that analyzes user data to create personalized schedules and offers tailored
-                recommendations for improved productivity, mental well-being, and overall physical health.</p>
-            <a href="https://github.com/Pva123/Coeus-AI" target="_blank">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub"
-                    style="width: 24px; height: 24px; margin-right: 5px;">
-            </a>
-        </section>
-        <section id="skills">
-            <h2>Programming Languages</h2>
-            <p>Python, Java, JavaScript, C, Bash, Lisp, HTML, CSS</p>
-        </section>
-    </main>
-    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
-    <script src="script.js"></script>
+<div class="container">
+
+  <!-- LEFT PROFILE CARD -->
+  <aside class="profile-card">
+    <div class="avatar-wrapper">
+      <img id="profileImage" src="https://via.placeholder.com/160" alt="Profile Picture" />
+      <label class="upload-btn">
+        Change Photo
+        <input type="file" accept="image/*" id="imageUpload" hidden />
+      </label>
+    </div>
+
+    <h2>Your Name</h2>
+    <p class="subtitle">Software Developer</p>
+
+    <div class="socials">
+      <a href="#">LinkedIn</a>
+      <a href="#">GitHub</a>
+      <a href="#">Instagram</a>
+    </div>
+
+    <div class="info">
+      <p>📍 Toronto, Canada</p>
+      <p>📧 your@email.com</p>
+      <p>📞 +1 xxx xxx xxxx</p>
+    </div>
+
+    <button class="resume-btn">View Resume</button>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="content">
+
+    <section class="section">
+      <h3>Skills</h3>
+
+      <div class="grid">
+        <div class="skill">Flutter</div>
+        <div class="skill">Android</div>
+        <div class="skill">Firebase</div>
+        <div class="skill">Node.js</div>
+        <div class="skill">React</div>
+        <div class="skill">Express</div>
+        <div class="skill">MongoDB</div>
+        <div class="skill">MySQL</div>
+        <div class="skill">Tailwind CSS</div>
+        <div class="skill">Bootstrap</div>
+        <div class="skill">Java</div>
+        <div class="skill">C++</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h3>Tools & Software</h3>
+
+      <div class="grid">
+        <div class="skill">Figma</div>
+        <div class="skill">Docker</div>
+        <div class="skill">GitHub</div>
+        <div class="skill">Power BI</div>
+        <div class="skill">WordPress</div>
+        <div class="skill">Shopify</div>
+      </div>
+    </section>
+
+  </main>
+
+</div>
+
+<script src="script.js"></script>
 </body>
-
 </html>
