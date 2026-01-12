@@ -37,14 +37,6 @@ body {
   border: 2px solid #b89b5e;
 }
 
-.upload-btn {
-  display: block;
-  margin-top: 10px;
-  font-size: 12px;
-  color: #b89b5e;
-  cursor: pointer;
-}
-
 .profile-card h2 {
   margin: 16px 0 4px;
 }
@@ -103,11 +95,60 @@ body {
   font-size: 22px;
 }
 
+.section p {
+  color: #ccc;
+  font-size: 15px;
+  line-height: 1.7;
+  max-width: 750px;
+}
+
+/* GRID */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-  gap: 16px;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 18px;
 }
+
+/* ===== NEW SKILL ICON CARDS ===== */
+
+.skill-card {
+  text-align: center;
+}
+
+.skill-icon {
+  background: #111;
+  border: 1px solid #b89b5e33;
+  border-radius: 12px;
+  height: 72px;
+  display: grid;
+  place-items: center;
+
+  transition: 
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.skill-icon img {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+}
+
+.skill-label {
+  margin-top: 8px;
+  font-size: 13px;
+  color: #ddd;
+}
+
+/* Hover effect */
+.skill-card:hover .skill-icon {
+  background: #151515;
+  border-color: #b89b5e66;
+  transform: translateY(-2px);
+}
+
+/* ===== LEGACY TEXT SKILLS (keep for long items) ===== */
 
 .skill {
   background: #111;
@@ -117,15 +158,10 @@ body {
   text-align: center;
   font-size: 14px;
 
-  /* NEW: smooth hover */
-  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+  transition: background 0.2s ease, border-color 0.2s ease;
 }
 
 .skill:hover {
-  /* NEW: subtle hover highlight (still dark mode) */
   background: #151515;
   border-color: #b89b5e66;
-
-  /* NEW: subtle lift (remove this line if you want zero movement) */
-  transform: translateY(-2px);
 }
